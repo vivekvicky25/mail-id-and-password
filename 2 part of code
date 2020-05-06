@@ -1,0 +1,29 @@
+# matching mail id and password in 3 attempts.
+
+mail_id = 'vivek'
+password = 'viv'
+
+login_mailid = input("Enter your mail I'd :")
+
+for attempt in range(2):
+    
+    if login_mailid == mail_id:
+
+        for attempt in range(3):
+            
+            login_password = input("Enter your Password :")
+            
+            if login_password == password:
+                print("You have successfully logged in")
+                break
+                
+            else:
+                print("your password does not match")
+       
+    else:
+        print("your mail id does not match")
+        login_mailid = input("Re-enter your mail id :")
+
+else:
+    print('You have exceeded no. of attempts')
+    
